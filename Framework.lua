@@ -1,4 +1,5 @@
-local function createNotification(title, content, notificationTime, zindex, brickColor)
+local framework = {}
+local function framework.createNotification(title, content, notificationTime, zindex, brickColor)
 	local TweenService = game:GetService("TweenService")
 	local Notification = Instance.new("ScreenGui")
 	local Notification_2 = Instance.new("Frame")
@@ -65,5 +66,4 @@ local function createNotification(title, content, notificationTime, zindex, bric
 	wait(0.7)
 	Notification:Destroy()
 end
-wait(5)
-createNotification("Notification", "ArdaT Loaded", 5)
+return framework
