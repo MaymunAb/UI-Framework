@@ -1,5 +1,5 @@
 local framework = {}
-local function createNotification(title, content, notificationTime, zindex, brickColor)
+function createNotification(title, content, notificationTime, zindex, brickColor)
 	local TweenService = game:GetService("TweenService")
 	local Notification = Instance.new("ScreenGui")
 	local Notification_2 = Instance.new("Frame")
@@ -35,7 +35,7 @@ local function createNotification(title, content, notificationTime, zindex, bric
 	Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Title.BorderSizePixel = 0
 	Title.Size = UDim2.new(1, 0, 0.300000012, 0)
-	Title.Font = Enum.Font.Unknown
+	Title.Font = Enum.Font.Nunito
 	Title.Text = title
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextScaled = true
@@ -52,7 +52,7 @@ local function createNotification(title, content, notificationTime, zindex, bric
 	Content.BorderSizePixel = 0
 	Content.Position = UDim2.new(0, 0, 0.300000012, 0)
 	Content.Size = UDim2.new(1, 0, 0.699999988, 0)
-	Content.Font = Enum.Font.Unknown
+	Content.Font = Enum.Font.Nunito
 	Content.Text = content
 	Content.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Content.TextSize = 22.000
