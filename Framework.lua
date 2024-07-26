@@ -1,5 +1,6 @@
 local framework = {}
 function createNotification(title, content, notificationTime, zindex, brickColor)
+	print("Creating Notification")
 	local TweenService = game:GetService("TweenService")
 	local Notification = Instance.new("ScreenGui")
 	local Notification_2 = Instance.new("Frame")
