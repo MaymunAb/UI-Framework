@@ -60,3 +60,5 @@ local function createNotification(title, content, notificationTime)
 	wait(notificationTime)
 	local tween = TweenService:Create(Notification_2, TweenInfo.new(0.7, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0), {Transparency = 1}):Play()
 end
+wait(5)
+createNotification("Bildirim", "ArdaT Test", 5)
