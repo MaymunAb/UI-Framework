@@ -1,4 +1,4 @@
-local function createNotification(title, content, notificationTime)
+local function createNotification(title, content, notificationTime, zindex, brickColor)
 	local TweenService = game:GetService("TweenService")
 	local Notification = Instance.new("ScreenGui")
 	local Notification_2 = Instance.new("Frame")
@@ -18,11 +18,14 @@ local function createNotification(title, content, notificationTime)
 
 	Notification_2.Name = "Notification"
 	Notification_2.Parent = Notification
+	Notification_2.ZIndex = zindex
+	Notification_2.BackgroundTransparency = 1
 	Notification_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 	Notification_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
 	Notification_2.BorderSizePixel = 0
+	Notification_2.BackgroundColor = BrickColor.new(brickColor)
 	Notification_2.Position = UDim2.new(0.720000029, 0, 0.829999983, 0)
-	Notification_2.Size = UDim2.new(0.25, 0, 0.119999997, 0)
+	Notification_2.Size = UDim2.new(0.25, 0, 0.1, 0)
 
 	Title.Name = "Title"
 	Title.Parent = Notification_2
@@ -59,6 +62,8 @@ local function createNotification(title, content, notificationTime)
 	local tween = TweenService:Create(Notification_2, TweenInfo.new(0.7, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0), {Transparency = 0}):Play()
 	wait(notificationTime)
 	local tween = TweenService:Create(Notification_2, TweenInfo.new(0.7, Enum.EasingStyle.Sine, Enum.EasingDirection.In, 0, false, 0), {Transparency = 1}):Play()
+	wait(0.7)
+	Notification:Destroy()
 end
 wait(5)
-createNotification("Bildirim", "ArdaT Test", 5)
+createNotification("Notification", "ArdaT Loaded", 5)
