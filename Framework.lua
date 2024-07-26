@@ -1,4 +1,5 @@
 local framework = {}
+print("framework loaded")
 function createNotification(title, content, notificationTime, zindex, brickColor)
 	print("Creating Notification")
 	local TweenService = game:GetService("TweenService")
